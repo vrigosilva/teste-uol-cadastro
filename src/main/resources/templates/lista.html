@@ -1,0 +1,60 @@
+<!doctype html>
+<html  xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js" ></script>
+
+    <title>Lista de Jogadores</title>
+  </head>
+  <body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="#"> Cadastro Jogadores UOL  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/" th:href="@{/}">Jogadores</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/jogadorForm" th:href="@{/jogadorForm}">Novo</a>
+	      </li>
+	     </ul>
+	  </div>
+	</nav>
+
+	<div class="container">
+
+		<div id="listaDeJogadores">
+		    <table class="table table-hover">
+		        <thead>
+		        <tr>
+		            <th>Nome</th>
+		            <th>E-mail</th>
+		            <th>Telefone</th>
+		            <th>Codinome</th>
+		            <th>Lista origem</th>
+		        </tr>
+		        </thead>
+		        <tr th:each="jogador : ${jogadores}">
+		            <td> <span th:text="${jogador.name}"></span> </td>
+		            <td> <span th:text="${jogador.email}"></span> </td>
+		            <td> <span th:text="${jogador.fone}"></span> </td>
+		            <td> <span th:text="${jogador.codinome}"></span> </td>
+		            <td> <span th:text="${jogador.origem.descricao}"></span> </td>
+		        </tr>
+		    </table>
+		</div>	
+	</div>
+
+  </body>
+</html>
