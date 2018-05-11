@@ -1,3 +1,13 @@
+Execução
+===============
+Baixe o projeto para sua máquina  acesse a pasta 'teste-uol-cadastro' e execute um dos seguintes comandos:
+
+* java -jar target/cadastrojogadores-0.0.1-SNAPSHOT.jar
+* mvn package && java -jar target/cadastrojogadores-0.0.1-SNAPSHOT.jar
+
+Após isso o projeto estará disponível em sua máquina através do endereço http://localhost:8080/
+
+
 Sobre o UOL HOST
 ===============
 O UOL HOST oferece soluções em hospedagem de sites, loja virtual, loja de aplicativos, revenda de hospedagem, registro de domí­nios, e-mail marketing, cloud computing, entre outros, contando com a confiabilidade e a escalabilidade de uma moderna infraestrutura de TI, composta por uma das maiores redes de Data Centers da América Latina.
