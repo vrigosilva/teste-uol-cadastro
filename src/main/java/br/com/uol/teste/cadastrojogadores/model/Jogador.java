@@ -11,8 +11,6 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import org.hibernate.validator.internal.IgnoreForbiddenApisErrors;
-
 @Entity
 @Table(name="JOGADOR")
 public class Jogador {

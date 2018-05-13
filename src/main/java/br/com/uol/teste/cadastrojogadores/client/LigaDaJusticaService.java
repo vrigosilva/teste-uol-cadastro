@@ -1,6 +1,5 @@
 package br.com.uol.teste.cadastrojogadores.client;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
