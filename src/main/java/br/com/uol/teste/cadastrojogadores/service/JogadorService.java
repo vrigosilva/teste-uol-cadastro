@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
@@ -18,7 +20,9 @@ import br.com.uol.teste.cadastrojogadores.repository.JogadorRepository;
 
 @Service
 public class JogadorService {
+	private static final Logger log = LoggerFactory.getLogger(JogadorService.class);
 
+	
 	@Autowired
 	JogadorRepository repo;
 	
@@ -32,7 +36,9 @@ public class JogadorService {
 	
 
 	public Iterable<Jogador> listaJogadores(){
-		return  repo.findAll();
+		Iterable<Jogador> findAll = repo.findAll();
+		log.debug(findAll.toString());
+		return  findAll;
 	}	
 	
 	
@@ -53,7 +59,8 @@ public class JogadorService {
 		
 		
 		repo.save(jogador);
-
+System.out.println(jogador.getId());
+		
         return true;
     }
 

@@ -27,8 +27,8 @@ public class JogadorControler {
 	
 	@RequestMapping("/")
 	public String lista(Model model){
-		log.debug("Model: {}",model);
-		model.addAttribute("lista - jogadores", service.listaJogadores());
+		log.debug("lista - Model: {}",model);
+		model.addAttribute("jogadores", service.listaJogadores());
 		return "lista";
 	}
 	
